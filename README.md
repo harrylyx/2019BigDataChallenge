@@ -318,7 +318,7 @@ data2 = pd.read_csv(RESULT_PATH+"/mysubmission_201908011_nn.csv",header = None)
 data2.columns = ['query_id', 'query_title_id', 'prediction']
 prediction_rank_1 = data1.groupby("query_id").rank(ascending=True, pct=True)['prediction']
 prediction_rank_2 = data2.groupby("query_id").rank(ascending=True, pct=True)['prediction']
-prediction_rank = prediction_rank_1 * 0.7 + prediction_rank_2 * 0.3
+prediction_rank = prediction_rank_1 * 0.3 + prediction_rank_2 * 0.7
 ```
 
 
